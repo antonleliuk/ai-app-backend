@@ -1,0 +1,14 @@
+[Unit]
+Description=AI app service
+After=mosquitto.service
+Requires=mosquitto.service
+
+[Service]
+Environment=DISPLAY=:0
+ExecStart=/home/pi/ai-app/scripts/run.sh
+WorkingDirectory=/home/pi/ai-app
+User=pi
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

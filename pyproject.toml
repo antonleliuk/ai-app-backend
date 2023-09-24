@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "ai-app"
+version = "0.0.1"
+description = "Simple home python application"
+authors = ["Anton Leliuk <anton.leluk@gmail.com>"]
+license = "Apache 2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10.12"
+paho-mqtt = "1.6.1"
+python-dotenv = "1.0.0"
+openai = "0.27.9"
+pillow = "10.0.0"
+rpi-gpio = "0.7.1"
+waveshare-epd-driver = "1.0.0"
+spidev = "3.6"
+pylint = "2.17.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry-exec-plugin.commands]
+lint = "poetry run pylint src"
